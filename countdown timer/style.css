@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.body{
+    background-image: url(./mont.jpg);
+    background-size: cover;
+}
+.h1-c{
+    display:flex ;
+    justify-content: center;
+    margin-top: 10px;
+}
+.h1-c h1{
+    font-size: 70px;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container div{
+    padding: 20px;
+    margin-left: 20px;
+}
+.container span{
+    padding-left: 20px;
+}
+.days-c{
+   font-size: 20px; 
+}
+.days-c p{
+    justify-content: center;
+    display: flex;
+    font-size: 100px;
+}
+.hours-c{
+    font-size: 20px; 
+}
+.hours-c p{
+     justify-content: center;
+     display: flex;
+     font-size: 100px;
+}
+
+.min-c{
+    font-size: 20px; 
+}
+.min-c p{
+     justify-content: center;
+     display: flex;
+     font-size: 100px;
+}
+.sec-c{
+    font-size: 20px; 
+}
+.sec-c p{
+     justify-content: center;
+     display: flex;
+     font-size: 100px;
+}
+@media (max-width: 426px){
+    .container{
+        display: block;
+    }
+    .container .sp {
+        margin-left: 130px;
+    }
+    .h1-c h1{
+        margin-left: 40px
+    }
+}
+@media (max-width: 376px){
+    .h1-c h1{
+        margin-left: 5px;
+    }
+}
+@media (max-width: 321px){
+    .h1-c h1{
+        margin-left: 70px;
+    }
+    .container div{
+        margin-left: 0px;
+    }
+}

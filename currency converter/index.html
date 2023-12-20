@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <article>
+        <section class="section">
+            <div class="title">
+                <h1>Currency Converter</h1>
+            </div>
+            <div class="container">
+                <div class="value">
+                    <input  id="value" name="value" type="number" placeholder="introduce the vlaue">
+                </div>
+                <select class="select1" name="opciones" id="opciones1"> 
+                    <option value="opcion1">Peso ARG</option>
+                    <option value="opcion2">Peso MEX</option>
+                    <option value="opcion3">Dolar</option>
+                    <option value="opcion4">Euro</option>
+                    <option value="opcion5">Pounds</option>
+                    <option value="opcion6">Yen</option> 
+                </select>
+                <label class="to" for="opciones1">TO</label>
+                <select class="select2" name="opciones" id="opciones2">
+                    <option value="opcion1">Peso ARG</option>
+                    <option value="opcion2">Peso MEX</option>
+                    <option value="opcion3">Dolar</option>
+                    <option value="opcion4">Euro</option>
+                    <option value="opcion5">Pounds</option>
+                    <option value="opcion6">Yen</option>  
+                </select>
+                <button type="submit" id="btn">Convert</button>
+            </div>
+            <div class="h2">
+                <h2 id="resultado">Waiting for the convertion</h2>
+            </div>
+        </section>
+    </article>
+    <script src="./script.js"></script>
+</body>
+</html>
