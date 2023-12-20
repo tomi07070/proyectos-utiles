@@ -1,0 +1,424 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body{
+    background-color: #ededed ;
+    flex-wrap: wrap;
+}
+
+.header {
+    background-color: #ab90b6 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    
+}
+
+.bars-cont i{
+    color: #000;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+.bars-cont button{ /*copia*/
+    border: none;
+    background: none;
+}
+.cerrar{ /*copia*/
+    font-size: 40px;
+    display: none;
+}
+.cerrar button{
+    border: none;
+    background: none;
+    color: #fff;
+}
+.header.logo{
+    justify-content: left;
+}
+
+.header .logo img{
+    height: 170px;
+    width: auto;
+    cursor: pointer;
+}
+.header .nav-links{
+    list-style: none;
+    cursor: pointer;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;   
+}
+
+.header .nav-links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+    
+}
+
+.header .nav-links a:hover{
+    color: #340034 ;
+}
+
+.header .btn{
+    margin-right: 100px;
+}
+
+.header .btn button{
+    font-size: 25px;
+    color: #ab49ab;
+    background: #fff;
+    padding: 9px 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 1 ease 1;
+}
+
+.header .btn button:hover{
+    color: #fff;
+    background-color:#340034 ;
+    transform: scale(1.1);
+}
+/* hasta aca es la navbar */
+
+.h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #340034;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 30px;
+    font-size: 80px;
+}
+
+.article .section .container .h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -30px
+}
+
+.article .section .container .ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dos columnas de igual ancho */
+    grid-gap: 40px; /* Espacio entre las celdas */
+    opacity: 0;
+    animation: aparecer 1s forwards;
+}
+
+.article .section .container .ul li{
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 350px;
+    height: 300px;
+    border:  7px double #340034;
+    overflow: hidden; 
+    word-wrap: break-word; 
+    white-space: normal;
+    background-color: #ab90b6;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.article .section .container a{
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #340034;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    transition: ease ;
+}
+.article .section .container a:hover{
+    transform: scale(1.1)
+}
+
+@keyframes aparecer{
+    from{
+        opacity: o;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes desaparecer{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+/* Aca empieza el footer */
+
+.footer .pie .container{
+    display: flex;
+    background-color: #ab90b6;
+    padding: 50px;
+}
+
+.footer .pie .container li{
+    margin-left: 20px;
+    list-style: none;
+}
+
+.footer .pie .container a{
+    text-decoration: none;
+    color: #fff;
+    padding: 30px;
+    font-size: 20px;
+    
+}
+
+.footer .pie .container i{
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.footer .pie .container .ig{
+    margin-top: -3px;
+}
+
+.footer .pie .container li:hover{
+    transform: scale(1.1);
+}
+
+.footer .pie .container a:hover{
+    color: #340034;
+}
+
+.derechos{
+    color: #340034;
+    background-color: #ab90b6;
+    margin-left: 60%;
+    margin-top: -67px;
+    font-size: 20px;
+}
+
+
+/*Resposive desing*/
+@media (max-width: 1400px){
+    .article .section .container .ul{
+       display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 400px;
+        width: 800px; 
+    }
+}
+@media (max-width: 1024px){
+    .h1{
+        margin-left: 230px;
+    }
+    .bars-cont i{/*copia*/
+        display: block;
+    }
+    .cerrar{ /*copia*/
+        margin-left: 230px;
+        z-index: 100;
+        display: block;
+        color: #340034;
+    }
+    .navbar{ /*copia*/
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        right: -270px;
+        width: 300px;
+        height: 700px;
+        background-color: #340034;
+        justify-content: space-between;
+        z-index: 100;
+        transition: .8s ease;
+        font-size: 60px;
+    }
+    .navbar.visible{ /*copia*/
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav-links{/*copia*/
+        flex-direction: column;
+        align-items: end;
+        
+    }
+    .nav-links a{
+        padding: 40px;
+        margin-bottom: 20px;
+        gap: 20px; 
+    }
+    .navbar .nav-links .btn button{
+        color: #340034;
+    }
+    .header{
+        width: 130%;
+    }
+    .footer .pie .container{
+        height: 130px;
+        margin-bottom: 0;
+        width: 130%;
+    }
+    .derechos {
+        margin-left: 100px;
+        position: absolute;
+        top: 2890px;
+    }
+}
+@media (max-width: 733px){
+    
+    .header{
+        width: 750px;
+        margin-right: 90px;
+    }
+}
+@media (max-width: 733px){
+    
+}
+@media (max-width: 768px){
+    .header{
+        width:1300px ;
+        }    
+    .footer .pie .container{
+        flex-direction: column;
+        height: 300px;
+        margin-top: 100px;
+        margin-bottom: 0;
+        width: 170%;
+    }
+    .navbar{ /*copia*/
+        height: 900px;
+        position: absolute;
+        right: -480px;
+    }
+    .container li{
+        padding: .5px;
+        margin-bottom: 10px;
+    }
+    .derechos{
+        top: 3100px;
+    }
+    .h1{
+        margin-left: 480px;
+    }
+}
+@media (max-width: 455px) {
+    .footer .pie .container {
+        position: absolute;
+        top: 2900px;
+        height: 800px;
+        width: 310%;
+    }
+    .h1{
+        margin-left: 610px;
+    }
+    .article .section .container h1 span{
+        font-size: 170px;
+    }
+    .navbar{ /*copia*/
+        height: 900px;
+        position: absolute;
+        right: -880px;
+        width: 600px;
+        font-size: 50px;
+        gap: 30px;
+    }
+    .cerrar{
+        margin-left: 530px;
+        font-size: 70px;
+    }
+     .header .navbar .nav-links .btn button{
+        font-size: 50px;
+    }
+    .header .navbar .nav-links  a{
+        font-size: 60px;
+    }
+    .derechos{
+        top: 2990px;
+        position: absolute;
+        margin-top: 530px;
+        font-size: 50px;
+        margin-left: 125px;
+    }
+    .footer .pie .container a{
+        padding: 40px;
+        font-size: 50px;
+        
+    }
+    .footer .pie .container li{
+        padding: 20px;
+    }
+    
+}
+@media (max-width: 385px){
+    .footer .pie .container{
+        width: 440%;
+        height: 900px;
+    }
+    .derechos{
+        margin-left: 140px;
+    }
+    .header{
+        width: 400%;
+    }
+    .article .section .container .ul a{
+        font-size: 80px;
+    }
+    .article .section .container .ul li{
+        width: 80%;
+        margin-left: 0px;
+        margin-right: 900px;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar{ /*copia*/
+        height: 900px;
+        position: absolute;
+        right: -1110px;
+        width: 600px;
+        font-size: 50px;
+        gap: 30px;
+    }
+    .article .section .container .ul{
+        grid-row-gap: 40px;
+        width: 280%;
+        height: 120%;
+        align-items: center;
+        justify-content: center; /* Centra en el eje principal (horizontal) */
+    }
+    .article .section .container h1 span{
+        font-size: 170px;
+        margin-left: 290px;
+    }
+}
+@media(max-width: 320px){
+    .bars-cont i{
+        display: flex;
+        margin-right: 220px;
+    }
+    .navbar{ /*copia*/
+        height: 900px;
+        position: absolute;
+        right: -950px;
+        width: 600px;
+        font-size: 50px;
+        gap: 30px;
+    }
+}

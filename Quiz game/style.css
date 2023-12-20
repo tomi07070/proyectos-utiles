@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url(./mont.jpg);
+    background-size: cover;
+}
+
+
+.container{
+    background-color: transparent;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 600px;
+    height: 310px;
+    margin-left: 30%;
+    margin-top: 70px;
+}
+.container h2{
+    color: #000;
+    justify-content: center;
+    display: flex;
+    border-bottom: 2px solid rgba(26, 103, 211, 0.953);
+    margin-bottom: 30px;
+    font-size: 30px
+}
+.container ul{
+    margin-left: 50px;
+    font-size: 15px;
+    list-style: none;
+}
+.container .li-c{
+    font-size: 20px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+.container .li-c label{
+    margin-left: 10px;
+}
+.container .li-c input{
+    cursor: pointer;
+}
+.container button{
+    border: none;
+    color: #fff;
+    background-color: rgb(0, 128, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    height: 40px;
+    width: 600px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.container button:hover{
+    font-size: 25px;
+}
+@media (max-width: 1024px) {
+    .container{
+        margin-left: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        margin-left: 80px;
+    }
+    body{
+        background-size:auto;
+    }
+}
